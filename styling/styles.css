@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: hsl(265, 49%, 23%);
+    --card-bg: hsl(225, 4%, 19%);
+    --p-text: hsla(0, 0%, 100%, 0.9);
+    --button-bg: hsl(37, 82%, 57%);
+    --button-text: hsl(225, 4%, 19%);
+    --button-shadow: 5px 10px hsla(37, 90%, 30%, 0.9);
+    --button-bg-hover: hsl(265, 30%, 70%);
+    --button-shadow-hover: 10px 15px hsla(256, 40%, 50%, 0.9);
+    --glow-color: hsla(166, 92%, 53%, 0.9);
+    --glow-effect: 0px 0px 40px 15px var(--glow-color);
+    --gradient: linear-gradient(
+        to bottom right,
+        hsl(256, 49%, 23%),
+        #104C57
+    );
+    --rounded-corners: 8px;
+    --small-font-family: 'Poppins', sans-serif;
+    --small-font-size: 1.25rem;
+    --header-font-family: 'Special Elite', monospace;
+    --header-font-size: 2rem;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bg-color);
+    background-image: var(--gradient);
+}
+
+main {
+    width: 90%;
+    max-width: 800px;
+    padding: 1rem;
+    background-color: var(--card-bg);
+    color: var(--p-text);
+    border-radius: var(--rounded-corners);
+    box-shadow: var(--glow-effect);
+}
+
+.hidden {
+    display: none;
+}
+
+/* Text Styles */
+
+h1 {
+    font-family: var(--header-font-family);
+    font-size: var(--header-font-size);
+    text-align: right;
+    opacity: 0.7;
+}
+
+p {
+    text-align: center;
+    margin: 1rem;
+}
+
+button, p {
+    font-family: var(--small-font-family);
+    font-size: var(--small-font-size);
+}
+
+/* Button Styles */
+
+button {
+    padding: 0.5rem 1rem;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    width: 100%;
+    box-shadow: var(--button-shadow);
+    border: none;
+}
+
+button:hover, button:focus {
+    background-color: var(--button-bg-hover);
+    box-shadow: var(--button-shadow-hover);
+}
+
+button:active {
+    opacity: 0.5;
+}
+
+.start-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.start-button {
+    margin: 24px 0;
+    width: auto;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 700px) {
+    .choice-button {
+        margin: 10px 0;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    .choices-grid-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 24px;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    main {
+        padding: 3rem;
+    }
+}
