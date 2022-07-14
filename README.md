@@ -1,7 +1,6 @@
 # Haunted Forest #
 
-Live version: TBC
-Created with: HTML, CSS, JavaScript
+Live version: https://haunted-forest.netlify.app/
 
 Haunted Forest is a text based adventure game that is currently a work in progress. I will work on adding more story branches and inventory items over time.
 
