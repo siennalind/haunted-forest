@@ -53,7 +53,11 @@ const storyPath = [
     },
     {
         id: 5,
-        text: "Oops, there is no more yet! This is a work in progress, more choices will be added with time so please come back later!"
+        text: "Oops, there is no more yet! This is a work in progress, more choices will be added with time so please come back later!",
+        choices: [
+            { text: "Another try?", 
+            nextText: -1 }
+        ]
     }
 ]
 
