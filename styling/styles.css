@@ -28,23 +28,16 @@
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100vw;
     height: 100vh;
     background-color: var(--bg-color);
     background-image: var(--gradient);
+
 }
 
 main {
-    width: 90%;
-    max-width: 800px;
-    padding: 1rem;
-    background-color: var(--card-bg);
+    padding: 3rem 1rem;
     color: var(--p-text);
-    border-radius: var(--rounded-corners);
-    box-shadow: var(--glow-effect);
 }
 
 .hidden {
@@ -56,7 +49,7 @@ main {
 h1 {
     font-family: var(--header-font-family);
     font-size: var(--header-font-size);
-    text-align: right;
+    text-align: center;
     opacity: 0.7;
 }
 
@@ -79,15 +72,20 @@ button {
     width: 100%;
     box-shadow: var(--button-shadow);
     border: none;
+    cursor: pointer;
 }
 
-button:hover, button:focus {
+button:hover {
     background-color: var(--button-bg-hover);
     box-shadow: var(--button-shadow-hover);
 }
 
 button:active {
     opacity: 0.5;
+}
+
+.choice-button {
+    margin: 10px 0;
 }
 
 .start-wrapper {
@@ -101,25 +99,54 @@ button:active {
     width: auto;
 }
 
-/* Media Queries */
 
-@media only screen and (max-width: 700px) {
-    .choice-button {
-        margin: 10px 0;
-    }
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 650px) {
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-@media only screen and (min-width: 700px) {
-    .choices-grid-wrapper {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        gap: 24px;
-        width: 80%;
-        margin: 0 auto;
-    }
+main {
+    margin: 1rem;
+    width: 90%;
+    max-width: 800px;
+    padding: 3rem;
+    background-color: var(--card-bg);
+    border-radius: var(--rounded-corners);
+    box-shadow: var(--glow-effect);
+}
 
-    main {
-        padding: 3rem;
-    }
+/* Text Styles */
+h1 {
+    text-align: right;
+}
+
+/* Button Styles */
+
+.choices-grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 24px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+button:focus {
+    background-color: var(--button-bg-hover);
+    box-shadow: var(--button-shadow-hover);
+}
+
+.choice-button {
+    margin: 0;
+}
 }
