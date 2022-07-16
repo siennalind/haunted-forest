@@ -75,11 +75,6 @@ button {
     cursor: pointer;
 }
 
-button:hover {
-    background-color: var(--button-bg-hover);
-    box-shadow: var(--button-shadow-hover);
-}
-
 button:active {
     opacity: 0.5;
 }
@@ -99,14 +94,12 @@ button:active {
     width: auto;
 }
 
-
-
-
-
-
-
-
-
+@media (hover: hover) {
+    button:hover {
+        background-color: var(--button-bg-hover);
+        box-shadow: var(--button-shadow-hover);
+    }
+}
 
 @media only screen and (min-width: 650px) {
 body {
