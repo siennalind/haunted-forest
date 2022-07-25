@@ -1,40 +1,37 @@
 const storyPath = [
     {
         id: 1,
-        text: "Your car breaks down in the middle of a dark forest, what do you do?",
+        text: "You're driving on a narrow road through the forest that should've been a shortcut, but there's no end to it in sight and you don't know where you are. You hear a loud crack of thunder as lightning illuminates the road. In the brief flash of light you see a figure in the road.",
         choices: [
-            { text: "Get your flashlight",
-             setInventory: { flashlight: true },
+            { text: "Swerve to avoid it",
+             setInventory: { car: false },
              nextText: 2 },
-            { text: "Walk into the forest",
-             nextText: 3 },
-            { text: "Lock your doors",
-             nextText: 4 },
-            { text: "Go to sleep",
-             nextText: 4 }
+            { text: "Hit the breaks to stop",
+             setInventory: { car: true },
+             nextText: 3 }
         ]
     },
     {
         id: 2,
-        text: "You open the glovebox and pick up your flashlight.",
+        text: "You swerve to avoid the thing in the road but didn't see the tree stump that was by the side and hit that instead. Sitting in surprise for a moment you think about what to do next.",
         choices: [
-            { text: "Check the batteries",
-                nextText: 3 },
-            { text: "Get out of the car",
-        nextText: 5 },
-            { text: "Search your car",
+            { text: "Get out to check what was in the road",
+                nextText: 4 },
+            { text: "Get out to check the damage to your car",
+                nextText: 4 },
+            { text: "Stay in the car and try to start it again",
             nextText: 5 }
         ]
     },
     {
         id: 3,
-        text: "You walk into the dark forest with no light to guide you",
+        text: "You hit the breaks to stop your car before the creature. You can see a flicker of it in your headlights as it runs away into the forest. Luckily there's no one else on this road.",
         choices: [
-            { text: "Follow the path",
+            { text: "Ignore the creature and continue",
             nextText: 5 },
-            { text: "Go left into the trees",
+            { text: "Pull in at the side of the road to explore",
             nextText: 5 },
-            { text: "Go right towards the field",
+            { text: "Get out of the car",
             nextText: 5 },
             { text: "Light your flashlight",
                 requiredItem: (currentItems) => currentItems.flashlight,
