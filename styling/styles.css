@@ -22,7 +22,7 @@
     );
     --rounded-corners: 8px;
     --small-font-family: 'Poppins', sans-serif;
-    --small-font-size: 1.25rem;
+    --small-font-size: 1.3rem;
     --header-font-family: 'Special Elite', monospace;
     --header-font-size: 2rem;
     --text-shadow: 5px 5px 2px hsl(0, 0%, 0%);
@@ -57,6 +57,8 @@ h1 {
 p {
     text-align: center;
     margin: 1rem;
+    line-height: 1.6;
+    text-align: left;
 }
 
 button, p {
