@@ -40,7 +40,7 @@ const storyPath = [
             {
                 text: "Pull in at the side of the road to explore",
                 setInventory: { flashlight: true },
-                nextText: 5 },
+                nextText: 6 },
             {
                 text: "Get out of the car",
                 nextText: 5 }
@@ -52,16 +52,17 @@ const storyPath = [
         choices: [
             {
                 text: "Check the boot for anything useful",
-                nextText: 10 },
+                setInventory: { bag: true },
+                nextText: 7 },
             {
                 text: "Follow the road ahead",
-                nextText: 10 },
+                nextText: 8 },
             {
                 text: "Backtrack along the road",
-                nextText: 10 },
+                nextText: 8 },
             {
                 text: "Walk into the forest",
-                nextText: 10
+                nextText: 9
             }
         ]
     },
@@ -74,10 +75,69 @@ const storyPath = [
                 nextText: 10 },
             {
                 text: "Roll down your window",
-                nextText: 10 },
+                nextText: 11 },
             {
                 text: "Sit very still and hope they don't see you",
-                nextText: 10 },
+                nextText: 12 },
+        ]
+    },
+    {
+        id: 6,
+        text: "You grab your flashlight from the glovebox beore getting out of you car. Shining the light on your surroundings a few damaged bushes at the side of the road is the only trace you can see of the animal.",
+        choices: [
+            {
+                text: "Get back in your car",
+                nextText: 13
+            },
+            {
+                text: "Check the damaged bushes",
+                nextText: 14
+            },
+            {
+                text: "Check the boot before exploring",
+                setInventory: { bag: true },
+                nextText: 7
+            },
+            {
+                text: "Check your phone",
+                nextText: 15
+            }
+        ]
+    },
+    {
+        id: 7,
+        text: "Checking your trunk you grab the bag you'd packed for your trip. It still has some clean clothes and snacks in it that might come in handy.",
+        choices: [
+            {
+                text: "Walk along the road",
+                nextText: 8
+            },
+            {
+                text: "Walk into the forest",
+                nextText: 9
+            }
+        ]
+    },
+    {
+        id: 8,
+        text: "The road seems endless as you try to see a sign or light in the darkness. After what seems like forever you can hear what sounds like footsteps as the silhouette of something or someone comes into view.",
+        choices: [
+            {
+                text: "Wave and try to get their attention",
+                nextText: 16
+            },
+            {
+                text: "Hide in the forest",
+                nextText: 17
+            },
+            {
+                text: "Stop and stay where you are",
+                nextText: 18
+            },
+            {
+                text: "Keep walking towards them",
+                nextText: 19
+            }
         ]
     },
     {
@@ -93,10 +153,27 @@ const storyPath = [
 ]
 
 /*
-id: number,
-text: "string",
-choices: [
-    { text: "string",
-    nextText: number }
-]
+const storyNodeTemplate = 
+{
+    id: Number,
+    text: "string",
+    choices: [
+        {
+            text: "",
+            nextText: Number
+        },
+        {
+            text: "",
+            nextText: Number
+        },
+        {
+            text: "",
+            nextText: Number
+        },
+        {
+            text: "",
+            nextText: Number
+        }
+    ]
+}
 */
